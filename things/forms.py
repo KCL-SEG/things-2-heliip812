@@ -13,9 +13,9 @@ class ThingForm(forms.ModelForm):
     #     model = Thing
     #     fields = ['name', 'description', 'quantity']
 
-    name = forms.CharField(label='Name')
-    description = forms.Textarea(label='Description')
-    quantity = forms.NumberInput(label='Quantity')
+    name = forms.CharField()
+    description = forms.Textarea()
+    quantity = forms.NumberInput()
 
     def save(self):
         """Create a new user."""
