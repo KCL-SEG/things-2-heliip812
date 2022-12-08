@@ -7,15 +7,15 @@ from .models import Thing
 
 class ThingForm(forms.ModelForm):
 
-    class Meta:
-        """Form options."""
+    # class Meta:
+    #     """Form options."""
 
-        model = Thing
-        fields = ['name', 'description', 'quantity']
+    #     model = Thing
+    #     fields = ['name', 'description', 'quantity']
 
-    name = forms.CharField()
-    description = forms.Textarea()
-    quantity = forms.NumberInput()
+    name = forms.CharField(label='Name')
+    description = forms.Textarea(label='Description')
+    quantity = forms.NumberInput(label='Quantity')
 
     def save(self):
         """Create a new user."""
